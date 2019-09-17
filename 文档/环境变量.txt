@@ -1,0 +1,24 @@
+环境变量
+tmp=shiyanlou		定义变量
+echo $tmp			获取变量
+
+env|sort>env.txt		输出env变量到env.txt
+set|sort>set.txt
+export|sort>export.txt
+vimdiff env.txt set.txt export.txt		比较3个文件
+
+temp=shiyanlou	设置变量temp
+echo $temp		输出变量temp
+zsh				从默认的bash shell切换到zsh shell
+echo $temp		没有输出变量temp
+export temp		将temp变量输出为环境变量
+zsh
+echo $temp 		输出变量temp
+
+搜索文件：
+sudo apt-get update
+sudo apt-get install locate
+
+黑客帝国
+sudo apt-get install cmatrix
+cmatrix -C red
