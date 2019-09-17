@@ -1,0 +1,48 @@
+命令行：
+who am i	查看当前shell
+whoami		查看当前登录人
+pwd			查看当前目录路径
+
+touch file 		创建文件file
+cd /etc		进入目录/etc
+pwd			查看当前目录路径
+
+ctrl+c		终止
+ctrl+d 		关闭终端
+tab			代码自动补全
+tab+tab		代码提示
+
+find /		查找
+ctrl+a 		home键
+ctrl+e 		end键
+ctrl+s 		暂停，任意键恢复
+ctrl+z 		后台运行，fg恢复
+ctrl+k 		删除光标后面的所有字符
+
+通配符：
+touch asd.txt fgh.txt 	新建文件asd.txt和fgh.txt
+ls *.txt				列出.txt结尾的文件
+touch love_{1..10}_shiyanlou.txt	新建文件love_1_shiyanlou.txt，...，love_10_shiyanlou.txt
+
+帮助：
+man man		查看man的手册
+man ls		查看ls程序的手册
+man 1 ls	查看ls的常用手册
+ls --help	查看ls的帮助手册
+
+clear		清理屏幕
+
+作业：
+sudo apt-get update		更新
+sudo apt-get install sysvbanner		安装banner
+banner shiyanlou		使用banner程序展现“shiyanlou”
+printerbanner -w 50 A	打字机风格宽度50的字母A
+
+sudo apt-get install toilet		安装toilet字体风格
+toilet hello		使用toilet风格字体打印hello
+
+sudo apt-get install figlet		安装figlet字体风格
+figlet hello 		使用figlet字体风格打印hello
+
+
+
