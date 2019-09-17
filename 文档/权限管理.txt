@@ -1,0 +1,56 @@
+查看用户：
+who am i	
+whoami
+who mom likes
+who -q		当前登录用户数和用户名
+who -m		=who am i,who mom likes
+who -a 		打印所有
+
+创建用户：
+sudo adduser lilei		新建用户lilei，输入lilei的密码
+sudo passwd shiyanlou	修改shiyanlou的密码
+
+su -l lilei 			切换用户lilei
+who am i
+whoami
+pwd
+ctrl+d					退出用户lilei
+
+用户组：
+groups shiyanlou 		查看用户shiyanlou的用户组（用户：用户组）
+sudo cat /ect/sudoers.d/shiyanlou 	查看sudo组成员shiyanlou信息
+cat /ect/group | grep shiyanlou 	查看用户组
+
+su -l lilei
+sudo ls		因为lilei不在sudo组，没有ls权限
+su shiyanlou
+groups lilei
+sudo usermod -G sudo lilei		把lilei添加到sudo组
+groups lilei
+
+删除用户：
+sudo deluser lilei --remove-home	删除用户lilei及用户home文件
+
+文件权限：
+ls -l 		查看文件详细信息
+ls -lh		h显示文件大小
+
+修改文件拥有者：
+su -l lilei
+touch iphone6
+su shiyanlou
+sudo chown shiyanlou iphone6 	将iphone6的拥有者改为shiyanlou
+
+修改文件权限：
+su shiyanlou
+touch iphone6
+echo "echo \"hello shiyanlou\"">iphone6		将内容echo \"hello shiyanlou\"写入iphone6文件
+sudo chmod 600 iphone6		修改iphone6的权限为：-rw-------
+su lilei
+ls -lh 		
+cat iphone6		显示权限不够
+
+chmod go+rw iphone6 	添加文件iphone6的用户组和其他人rw权限
+chmod go-rw iphone6 	删除文件iphone6的用户组和其他人rw权限
+
+
