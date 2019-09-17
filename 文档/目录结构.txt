@@ -1,0 +1,62 @@
+目录结构：
+/bin /sbin	可执行文件
+/usr /var	用户文件
+/opt	第三方软件
+/usr	软件
+/ect	配置文件
+/boot	开机及内核
+/var/mail	用户信箱
+
+sudo apt-get update
+sudo apt-get install tree
+tree /		查看根目录的树形结构
+
+路径：
+cd /usr/local/bin	绝对路径
+pwd
+cd ~				返回home
+cd ../../usr/local/bin	相对路径
+pwd
+
+文件操作：
+touch test 		新建文件test
+mkdir mydir		新建文件夹mydir
+mkdir -p father/son/grandson	新建多层文件夹
+
+复制
+mkdir family
+cp father family 	报错
+cp -r father family		将多层文件夹father复制到family
+
+删除
+touch test
+chmod 444 test		设置test为只读
+rm test		如果test为只读，会有删除确认提示
+rm -f test	强制删除，无提示
+rm -r family 	删除family以及其子目录
+
+重命名
+mkdir Documents
+touch file1
+mv file1 Documents
+mv file1 myfile
+批量重命名
+touch file{1..5}.txt	批量新建文件
+ls
+rename 's/\.txt/\.c/' *.txt 	批量重命名
+rename 'y/a-z/A-Z/' *.c
+
+查看文件
+cp /etc/passwd passwd		将配置文件下的密码文件复制到当前目录的passwd
+cat -n passwd 		带行号，查看passwd
+more passwd			查看更多，h帮助，q退出，space下一屏幕，enter下一行
+less passwd 		man手册默认使用的就是less程序
+
+tail -n 1 /etc/passwd 	查看最后一行
+
+xeyes		召唤出一双屏幕眼睛
+
+mkdir homework
+touch {1..10}.txt
+rm -f {1..5}.txt
+
