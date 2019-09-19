@@ -1,0 +1,12 @@
+磁盘管理：
+dd of=test bs=10 count=1		将1个10Byte流输出到test
+hello shiyanlou			这里这读取10个字符，多余字符会自动成为输入
+
+du -b test			查看Byte的test
+cat test 			查看test
+
+dd if=/dev/stdin of=test bs=10 count=1 conv=ucase 		读取test文件转换成大写后输入到test
+shiyanlou
+
+挂载：
+mount [-o [操作选项]] [-t 文件系统类型] [-w|--rw|--ro] [文件系统源] [挂载点]
