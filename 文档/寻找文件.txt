@@ -1,0 +1,3 @@
+sudo find /etc/ -name sources.list
+sudo chown shiyanlou /etc/apt/sources.list
+sudo chmod 600 /etc/apt/sources.list
