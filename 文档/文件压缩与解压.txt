@@ -1,0 +1,20 @@
+文件压缩：
+zip -rqo shiyanlou.zip /home/shiyanlou/Dosktop		文件压缩成zip
+file shiyanlou.zip
+zip -r -9 -q -o shiyanlou_9.zip /home/shiyanlou/Desktop -x ~/*.zip		文件压缩成zip
+zip -r -e -o shiyanlou_encryption.zip /home/shiyanlou/Desktop		文件加密压缩
+
+tar -cf shiyanlou.tar /home/shiyanlou/Desktop		使用tar打包
+tar -xf shiyanlou.tar -C tardir			使用tar解压
+tar -tf shiyanlou.tar		只查看不解压
+
+tar -czf shiyanlou.tar.gz /home/shiyanlou/Desktop		使用tar压缩成gz
+
+文件解压：
+unzip shiyanlou.zip			解压zip
+unzip -q shiyanlou.zip -d ziptest		解压zip到ziptest
+unzip -l shiyanlou.zip		不解压，只查看内容
+unzip -O GBK 中文压缩文件.zip		指定编码
+
+tar -xzf shiyanlou.tar.gz		解压 *.tar.gz 文件
+
